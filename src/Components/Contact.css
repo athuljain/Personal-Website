@@ -3,13 +3,7 @@
     display: grid;
     grid-template-columns: 30% 58%;
     gap: 12%;
-    align-items: center;
-    
 } 
-.contactFull{
-    margin-top: 150px;
-    align-items: center;
-}
 
 .contact__options {
     display: flex;
