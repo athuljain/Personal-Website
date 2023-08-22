@@ -16,7 +16,7 @@ const Portfolio = () => {
       title: "Online Furniture Shop Website with React.js",
       img: IMG1,
       description:
-        "An Online Furniture Shop is a huge interactive platform to present various information for people.",
+        "An Online Furniture Shop Website.",
       technologies: "Html | CSS | Javascript | React Js",
       link: "https://lucky-hummingbird-9e9472.netlify.app/",
       github: "https://github.com/athuljain/React-online-furniture-shop",
@@ -35,7 +35,7 @@ const Portfolio = () => {
       id: 3,
       title: "E-commerce BackEnd project - online shirt shop",
       img: IMG3,
-      description: "E-commerce BackEnd project - online shirt shop - NodeJS,ExpressJS,MongoDb",
+      description: "E-commerce BackEnd project - online shirt shop ",
       technologies: "NodeJs | Express | MongoDB",
       link: "https://github.com/athuljain/ecommerce.git",
       github: "https://github.com/athuljain/ecommerce.git",

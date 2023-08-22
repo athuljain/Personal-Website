@@ -30,14 +30,10 @@ const Intro=()=>{
               </article>
             </div>
             <p>
-              0.5+ years experienced  Mern Stack Developer with hands-on experience in
-              identifying web-based user interactions along with designing and
-              implementing highly-responsive user interface components by
-              deploying React concepts. Proficient in translating designs and
-              wireframes into high-quality code, and writing application interface
-              code via JavaScript and React JS workflows. Adept at monitoring and
-              maintaining frontend performance and troubleshooting and debugging
-              the same to bolster overall performance.
+            I am a highly skilled and motivated web developer with expertise in MERN Stack. Proficient in Front-End Development,
+including React and its libraries, as well as Back-End development using NodeJS, ExpressJS, and MongoDB.Seeking an
+opportunity to work in an environment that will enhance my knowledge and career, and make a positive impact on the success
+of the company
             </p>
             <a href="#contact" className="btn btn-primary">
               Let's Talk

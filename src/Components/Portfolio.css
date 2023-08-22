@@ -35,7 +35,7 @@
 .portfolio__item-cta {
     display: flex;
     gap: 1rem;
-    margin-bottom: 2rem; 
+    margin-bottom: 10rem; 
 }
 
 .portfolio__item-content {
