@@ -5,6 +5,7 @@ import Footer from './Components/Footer';
 import Topbar from './Components/Topbar';
 import Intro from './Components/Intro';
 import Experience from './Components/Experience';
+import Portfolio from './Components/Portfolio';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
     <Topbar />
     <Intro />
     < Experience />
+    <Portfolio />
       <Footer />
     </div>
   );

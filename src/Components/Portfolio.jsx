@@ -1,13 +1,14 @@
 
-import IMG1 from "../../assets/Educational Website.jpg";
-import IMG2 from "../../assets/RubyCode Blog Project.jpg";
-import IMG3 from "../../assets/Startup Agency Project.jpg";
-import IMG4 from "../../assets/Covid-19 Project.jpg";
-import IMG5 from "../../assets/Jokes Project.jpg";
-import IMG6 from "../../assets/Project4.jpg";
+import IMG1 from "../Assets/reactEcomerce.png";
+import IMG2 from "../Assets/todoredux.png";
+import IMG3 from "../Assets/backend.png";
+// import IMG4 from "../../assets/Covid-19 Project.jpg";
+// import IMG5 from "../../assets/Jokes Project.jpg";
+// import IMG6 from "../../assets/Project4.jpg";
 import React from "react";
+import "./Portfolio.css"
 
-//Portfolio function
+
 const Portfolio = () => {
   const soloProjects = [
     {
@@ -23,7 +24,7 @@ const Portfolio = () => {
     {
       id: 2,
       title: "To-Do App with Redux",
-      img: IMG4,
+      img: IMG2,
       description:
         "Todo Application.",
       technologies: "React | Redux",
@@ -33,7 +34,7 @@ const Portfolio = () => {
     {
       id: 3,
       title: "E-commerce BackEnd project - online shirt shop",
-      img: IMG2,
+      img: IMG3,
       description: "E-commerce BackEnd project - online shirt shop - NodeJS,ExpressJS,MongoDb",
       technologies: "NodeJs | Express | MongoDB",
       link: "https://github.com/athuljain/ecommerce.git",
@@ -49,9 +50,9 @@ const Portfolio = () => {
       <div className="container portfolio__container">
         {soloProjects.map((pro) => (
           <article className="portfolio__item" key={pro.id}>
-            <div className="portfolio__item-image">
+            {/* <div className="portfolio__item-image">
               <img src={pro.img} alt={pro.title} />
-            </div>
+            </div> */}
             <div className="portfolio__item-content">
               <h3>{pro.title}</h3>
               <p>{pro.description}</p>
