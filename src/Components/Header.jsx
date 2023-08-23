@@ -1,6 +1,7 @@
 import React from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
+import {AiFillInstagram} from "react-icons/ai"
 import "./Header.css";
 
 import AthulJainResumePDF from "../Assets/AthulJainResume.pdf";
@@ -38,6 +39,13 @@ const Header = () => {
             rel=" noreferrer"
           >
             <FaGithub />
+          </a>
+          <a
+            href="https://instagram.com/athul_jain?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D/"
+            target="_blank"
+            rel=" noreferrer"
+          >
+            <AiFillInstagram />
           </a>
         </div>
       </div>
