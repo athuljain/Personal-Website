@@ -1,6 +1,7 @@
 import React from 'react';
 import { BsLinkedin } from 'react-icons/bs';
 import { FaGithub } from 'react-icons/fa';
+// import { Link } from 'react-router-dom';
 import "./Footer.css"
 
 const Footer = () => {
@@ -16,8 +17,12 @@ const Footer = () => {
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div className="footer__socials">
-      <a href="/https://www.linkedin.com/in/athul-jain-5382b0215/" target="_blank" rel="noreferrer" ><BsLinkedin /></a>
-      <a href="/https://github.com/athuljain/" target="_blank" rel="noreferrer" ><FaGithub /></a>
+      <a href="https://www.linkedin.com/in/athul-jain-5382b0215/" target="_blank" rel="noopener noreferrer">
+        <BsLinkedin />
+      </a>
+      <a href="https://github.com/athuljain/" target="_blank" rel="noopener noreferrer">
+        <FaGithub />
+      </a>
       </div>
       <div className="footer__copyright">
         <small>&copy; AJ 2023. All rights reserved.</small>
