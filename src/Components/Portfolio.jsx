@@ -7,7 +7,7 @@ import IMG3 from "../Assets/backend.png";
 import React from "react";
 import "./Portfolio.css";
 
-const Portfolio = () => {
+const portfolio = () => {
   const soloProjects = [
     {
       id: 1,
@@ -79,4 +79,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default portfolio;
