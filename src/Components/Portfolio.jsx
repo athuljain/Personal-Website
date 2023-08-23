@@ -1,4 +1,3 @@
-
 import IMG1 from "../Assets/reactEcomerce.png";
 import IMG2 from "../Assets/todoredux.png";
 import IMG3 from "../Assets/backend.png";
@@ -6,8 +5,7 @@ import IMG3 from "../Assets/backend.png";
 // import IMG5 from "../../assets/Jokes Project.jpg";
 // import IMG6 from "../../assets/Project4.jpg";
 import React from "react";
-import "./Portfolio.css"
-
+import "./Portfolio.css";
 
 const Portfolio = () => {
   const soloProjects = [
@@ -15,8 +13,7 @@ const Portfolio = () => {
       id: 1,
       title: "Online Furniture Shop Website with React.js",
       img: IMG1,
-      description:
-        "An Online Furniture Shop Website.",
+      description: "An Online Furniture Shop Website.",
       technologies: "Html | CSS | Javascript | React Js",
       link: "https://lucky-hummingbird-9e9472.netlify.app/",
       github: "https://github.com/athuljain/React-online-furniture-shop",
@@ -25,8 +22,7 @@ const Portfolio = () => {
       id: 2,
       title: "To-Do App with Redux",
       img: IMG2,
-      description:
-        "Todo Application.",
+      description: "Todo Application.",
       technologies: "React | Redux",
       link: "https://main--marvelous-trifle-b2888a.netlify.app/",
       github: "https://github.com/athuljain/React_Redux_ToDoApp",
@@ -39,7 +35,7 @@ const Portfolio = () => {
       technologies: "NodeJs | Express | MongoDB",
       link: "https://github.com/athuljain/ecommerce.git",
       github: "https://github.com/athuljain/ecommerce.git",
-    }
+    },
   ];
 
   return (
@@ -47,7 +43,7 @@ const Portfolio = () => {
       <h5>My Recent Work</h5>
       <h2>Portfolio</h2>
 
-      <div className="container portfolio__container" >
+      <div className="container portfolio__container">
         {soloProjects.map((pro) => (
           <article className="portfolio__item" key={pro.id}>
             {/* <div className="portfolio__item-image">

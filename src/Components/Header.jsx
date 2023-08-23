@@ -1,7 +1,7 @@
-import React from 'react';
-import { BsLinkedin } from 'react-icons/bs';
-import { FaGithub } from 'react-icons/fa';
-import "./Header.css"
+import React from "react";
+import { BsLinkedin } from "react-icons/bs";
+import { FaGithub } from "react-icons/fa";
+import "./Header.css";
 
 import AthulJainResumePDF from "../Assets/AthulJainResume.pdf";
 
@@ -19,26 +19,30 @@ const Header = () => {
           <a href="#contact" className="btn btn-primary">
             Let's talk
           </a>
-          
         </div>
         <a href="#contact" className="scroll__down">
           Scroll Down
         </a>
-       
 
         <div className="header__socials">
-      <a href="https://www.linkedin.com/in/athul-jain-5382b0215/" target="_blank" rel=" noreferrer">
-        <BsLinkedin />
-      </a>
-      <a href="https://github.com/athuljain/" target="_blank" rel=" noreferrer">
-        <FaGithub />
-      </a>
-      </div>
-
-
+          <a
+            href="https://www.linkedin.com/in/athul-jain-5382b0215/"
+            target="_blank"
+            rel=" noreferrer"
+          >
+            <BsLinkedin />
+          </a>
+          <a
+            href="https://github.com/athuljain/"
+            target="_blank"
+            rel=" noreferrer"
+          >
+            <FaGithub />
+          </a>
+        </div>
       </div>
     </header>
   );
-}
+};
 
 export default Header;

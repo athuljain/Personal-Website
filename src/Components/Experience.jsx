@@ -1,6 +1,6 @@
-import React from 'react';
-import { BsFillPatchCheckFill } from 'react-icons/bs';
-import "./Experience.css"
+import React from "react";
+import { BsFillPatchCheckFill } from "react-icons/bs";
+import "./Experience.css";
 
 const Experience = () => {
   return (
@@ -12,7 +12,7 @@ const Experience = () => {
           <h3>Full-Stack-Development</h3>
           <h4>Mern Stack</h4>
           <div className="experience__content">
-          <article className="experience__details">
+            <article className="experience__details">
               <BsFillPatchCheckFill className="experience__details-icon" />
               <h4>HTML</h4>
             </article>
@@ -48,7 +48,7 @@ const Experience = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Experience
+export default Experience;
