@@ -1,8 +1,9 @@
 import React from "react";
-import { BsLinkedin } from "react-icons/bs";
+import { BsLinkedin, } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 
 import {AiFillInstagram} from "react-icons/ai"
+
 
 // import { Link } from 'react-router-dom';
 import "./Footer.css";
@@ -52,7 +53,9 @@ const Footer = () => {
           rel="noopener noreferrer"
         >
           <AiFillInstagram />
+
         </a>
+       
 
 
       </div>
