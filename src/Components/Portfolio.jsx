@@ -1,7 +1,8 @@
 import IMG1 from "../Assets/reactEcomerce.png";
 import IMG2 from "../Assets/todoredux.png";
 import IMG3 from "../Assets/backend.png";
-// import IMG4 from "../../assets/Covid-19 Project.jpg";
+import IMG4 from "../Assets/perosnalPortfolio.jpg"
+ // import IMG4 from "../../assets/Covid-19 Project.jpg";
 // import IMG5 from "../../assets/Jokes Project.jpg";
 // import IMG6 from "../../assets/Project4.jpg";
 import React from "react";
@@ -35,6 +36,15 @@ const portfolio = () => {
       technologies: "NodeJs | Express | MongoDB",
       link: "https://github.com/athuljain/ecommerce.git",
       github: "https://github.com/athuljain/ecommerce.git",
+    },
+    {
+      id:4 ,
+      title: "Perosnal Portfolio app",
+      img: IMG4,
+      description: "Personal Portfolio app ",
+      technologies: "HTML | CSS | JavaScript | ReactJS ",
+      link: "https://athuljain-personal-website.vercel.app/",
+      github: "https://github.com/athuljain/Personal-Website",
     },
   ];
 

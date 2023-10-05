@@ -4,7 +4,8 @@ import { FaGithub } from "react-icons/fa";
 import {AiFillInstagram} from "react-icons/ai"
 import "./Header.css";
 
-import AthulJainResumePDF from "../Assets/AthulJainResume.pdf";
+//import AthulJainResumePDF from "../Assets/AthulJainResume.pdf";
+import AthulJainResume from "../Assets/AthulJain.pdf"
 
 const Header = () => {
   return (
@@ -14,7 +15,7 @@ const Header = () => {
         <h1>Athul Jain</h1>
         <h5 className="text-light">Mern-Stack-Developer</h5>
         <div className="cta">
-          <a href={AthulJainResumePDF} download className="btn">
+          <a href={AthulJainResume} download className="btn">
             Download CV
           </a>
           <a href="#contact" className="btn btn-primary">
