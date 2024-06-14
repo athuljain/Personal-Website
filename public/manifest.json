@@ -8,11 +8,13 @@
       "type": "image/x-icon"
     },
     {
+      
       "src": "./ajlogo.jpg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
+      
       "src": "./ajlogo.jpg",
       "type": "image/png",
       "sizes": "512x512"
