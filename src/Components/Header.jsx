@@ -3,6 +3,7 @@ import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import {AiFillInstagram} from "react-icons/ai"
 import "./Header.css";
+import { AiFillCodeSandboxCircle } from "react-icons/ai";
 
 //import AthulJainResumePDF from "../Assets/AthulJainResume.pdf";
 import AthulJainResume from "../Assets/AthulJain.pdf"
@@ -40,6 +41,13 @@ const Header = () => {
             rel=" noreferrer"
           >
             <FaGithub />
+          </a>
+          <a
+              href="https://codesandbox.io/u/athuljain/"
+          target="_blank"
+            rel=" noreferrer"
+          >
+            <AiFillCodeSandboxCircle />
           </a>
           <a
             href="https://instagram.com/athul_jain?utm_source=qr&igshid=MzNlNGNkZWQ4Mg%3D%3D/"

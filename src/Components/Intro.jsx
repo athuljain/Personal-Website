@@ -25,14 +25,14 @@ const Intro = () => {
             <article className="about__card">
               <VscFolderLibrary className="about__icon" />
               <h5>Projects</h5>
-              <small>4+ Completed Projects</small>
+              <small>6+ Completed Projects</small>
             </article>
           </div>
           <p>
             I am a highly skilled and motivated web developer with expertise in
             MERN Stack. Proficient in Front-End Development, including React and
             its libraries, as well as Back-End development using NodeJS,
-            ExpressJS, and MongoDB.Seeking an opportunity to work in an
+            ExpressJS and MongoDB.Seeking an opportunity to work in an
             environment that will enhance my knowledge and career, and make a
             positive impact on the success of the company
           </p>
