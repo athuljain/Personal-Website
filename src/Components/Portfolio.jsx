@@ -46,6 +46,16 @@ const portfolio = () => {
       link: "https://athuljain-personal-website.vercel.app/",
       github: "https://github.com/athuljain/Personal-Website",
     },
+    {
+      id:5 ,
+      title: "Mern E-commerce App",
+      img: IMG4,
+      description: "Personal Portfolio app ",
+      technologies: " CSS | ReactJS | nodeJs | ExpressJs | MongoDb                       ",
+      link: "https://athuljain-personal-website.vercel.app/",
+      github: "https://github.com/athuljain/ECommerce-Mern.git",
+    },
+    
   ];
 
   return (
