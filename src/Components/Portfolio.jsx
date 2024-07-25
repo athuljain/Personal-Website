@@ -2,6 +2,7 @@ import IMG1 from "../Assets/reactEcomerce.png";
 import IMG2 from "../Assets/todoredux.png";
 import IMG3 from "../Assets/backend.png";
 import IMG4 from "../Assets/perosnalPortfolio.jpg"
+import MernEcom from "../Assets/MernEcom.jpg"
  // import IMG4 from "../../assets/Covid-19 Project.jpg";
 // import IMG5 from "../../assets/Jokes Project.jpg";
 // import IMG6 from "../../assets/Project4.jpg";
@@ -49,10 +50,10 @@ const portfolio = () => {
     {
       id:5 ,
       title: "Mern E-commerce App",
-      img: IMG4,
+      img: MernEcom,
       description: "Personal Portfolio app ",
       technologies: " CSS | ReactJS | nodeJs | ExpressJs | MongoDb                       ",
-      link: "https://athuljain-personal-website.vercel.app/",
+      // link: "https://athuljain-personal-website.vercel.app/",
       github: "https://github.com/athuljain/ECommerce-Mern.git",
     },
     
@@ -66,9 +67,9 @@ const portfolio = () => {
       <div className="container portfolio__container">
         {soloProjects.map((pro) => (
           <article className="portfolio__item" key={pro.id}>
-            {/* <div className="portfolio__item-image">
-              <img src={pro.img} alt={pro.title} />
-            </div> */}
+            <div className="portfolio__item-image">
+              <img  src={pro.img} alt={pro.title} style={{ height: '150px' }}  />
+            </div>
             <div className="portfolio__item-content">
               <h3>{pro.title}</h3>
               <p>{pro.description}</p>
