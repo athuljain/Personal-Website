@@ -3,6 +3,8 @@ import IMG2 from "../Assets/todoredux.png";
 import IMG3 from "../Assets/backend.png";
 import IMG4 from "../Assets/perosnalPortfolio.jpg"
 import MernEcom from "../Assets/MernEcom.jpg"
+import BloodBank from '../Assets/BloodBankMern.jpg'
+import DoctorBooking from '../Assets/DoctorBooking.jpg'
  // import IMG4 from "../../assets/Covid-19 Project.jpg";
 // import IMG5 from "../../assets/Jokes Project.jpg";
 // import IMG6 from "../../assets/Project4.jpg";
@@ -49,13 +51,31 @@ const portfolio = () => {
     },
     {
       id:5 ,
-      title: "Mern E-commerce App",
+      title: "MERN E-commerce App",
       img: MernEcom,
       description: "Personal Portfolio app ",
       technologies: " CSS | ReactJS | nodeJs | ExpressJs | MongoDb                       ",
       // link: "https://athuljain-personal-website.vercel.app/",
       github: "https://github.com/athuljain/ECommerce-Mern.git",
     },
+    {
+      id:6 ,
+      title: "MERN Blood-Bank",
+      img: BloodBank,
+      description: "MERN Blood bank app ",
+      technologies: "CSS | ReactJS | nodeJs | ExpressJs | MongoDb  ",
+      // link: "https://athuljain-personal-website.vercel.app/",
+      github: "https://github.com/athuljain/Mern-Blood-Bank",
+    },
+    {
+    id:7 ,
+    title: "MERN Doctor Booking app",
+    img: DoctorBooking,
+    description: "MERN Doctor Booking app",
+    technologies: "CSS | ReactJS | nodeJs | ExpressJs | MongoDb  ",
+    // link: "https://athuljain-personal-website.vercel.app/",
+    github: "https://github.com/athuljain/Mern-DoctorBooking",
+  },
     
   ];
 
