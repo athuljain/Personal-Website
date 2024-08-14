@@ -7,7 +7,8 @@ import { AiFillCodeSandboxCircle } from "react-icons/ai";
 
 //import AthulJainResumePDF from "../Assets/AthulJainResume.pdf";
 // import AthulJainResume from "../Assets/AthulJain.pdf"
-import AthulJainMern from '../Assets/AthulJainMern.pdf'
+// import AthulJainMern from '../Assets/AthulJainMern.pdf'
+import AthulJainMern from '../Assets/AthulJainCv2024.pdf'
 const Header = () => {
   return (
     <header id="home">
