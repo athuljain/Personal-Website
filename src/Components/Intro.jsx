@@ -29,12 +29,11 @@ const Intro = () => {
             </article>
           </div>
           <p>
-            I am a highly skilled and motivated web developer with expertise in
-            MERN Stack. Proficient in Front-End Development, including React and
-            its libraries, as well as Back-End development using NodeJS,
-            ExpressJS and MongoDB.Seeking an opportunity to work in an
-            environment that will enhance my knowledge and career, and make a
-            positive impact on the success of the company
+          I am a highly skilled and motivated web developer specializing in the MERN Stack, I bring comprehensive expertise in full-stack
+development. My front-end proficiency encompasses React.js, Next.js, Redux, TypeScript, and related libraries, while my
+back-end expertise includes NodeJS,TypeScript ExpressJS, and MongoDB. I am eager to contribute to a dynamic
+organization where I can leverage my technical skills, advance my professional growth, and drive impactful results to support
+the company’s success.
           </p>
           <a href="#contact" className="btn btn-primary">
             Let's Talk
