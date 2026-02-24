@@ -106,43 +106,97 @@
 
 
 
+/* --- ABOUT SECTION WRAPPER --- */
 #about {
   padding: 8rem 0;
   position: relative;
-  background: #0f172a; /* Same as header */
+  background: #0f172a; /* Deep navy matching your header */
   overflow: hidden;
 }
 
-/* 1. Reuse Header Texture */
+/* --- 1. DYNAMIC BACKGROUND TEXTURE (HEADER MATCH) --- */
 .header__texture {
-  z-index: 1; /* Keep grid behind content */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(77, 181, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77, 181, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(77, 181, 255, 0.1), transparent 80%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  z-index: 1;
+  pointer-events: none;
 }
 
+/* --- 2. TECH ORBIT ICONS --- */
+.tech-orbit {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.orbit-icon {
+  position: absolute;
+  color: rgba(77, 181, 255, 0.07);
+  filter: blur(1px);
+  animation: floatVertical 10s infinite ease-in-out;
+}
+
+/* Specific Placements for the 6 Icons */
+.react-icon   { top: 10%; left: 5%; font-size: 5rem; animation-delay: 0s; }
+.next-icon    { top: 15%; right: 10%; font-size: 4rem; animation-delay: 2s; }
+.mongo-icon   { bottom: 10%; left: 8%; font-size: 4.5rem; animation-delay: 4s; }
+.node-icon    { bottom: 15%; right: 5%; font-size: 5.5rem; animation-delay: 1s; }
+.express-icon { top: 45%; right: 12%; font-size: 3.5rem; animation-delay: 3s; opacity: 0.6; }
+.ts-icon      { top: 50%; left: 10%; font-size: 3rem; animation-delay: 5s; }
+
+@keyframes floatVertical {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-40px) rotate(15deg); }
+}
+
+/* --- 3. CONTAINER & LAYOUT --- */
 .about__container {
   position: relative;
-  z-index: 2; /* Content above texture */
+  z-index: 2; /* Ensures content is above the background icons */
+}
+
+.section-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 4rem;
+  font-size: 2.5rem;
+  letter-spacing: 2px;
 }
 
 .about__layout {
   display: grid;
   grid-template-columns: 1fr 1.5fr;
-  gap: 4rem;
+  gap: 5rem;
   align-items: center;
-  margin-top: 3rem;
 }
 
-/* 2. THE NEON BORDER (Fixed to image size) */
+/* --- 4. NEON IMAGE FRAME (PERFECT CLIPPING) --- */
+.about__left {
+  display: flex;
+  justify-content: center;
+}
+
 .image-neon-frame {
   position: relative;
   width: 100%;
   max-width: 320px;
-  aspect-ratio: 4/5; /* Adjust to your image's shape */
+  aspect-ratio: 4/5;
   background: #111;
   border-radius: 2rem;
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden; /* Clips the rotation to image size */
+  overflow: hidden; /* Clips the rotating light exactly to image edges */
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .image-neon-frame::before {
@@ -157,8 +211,8 @@
 .image-neon-frame::after {
   content: '';
   position: absolute;
-  inset: 4px; /* Border thickness */
-  background: #0f172a; /* Match page bg */
+  inset: 4px; /* Border Thickness */
+  background: #0f172a; /* Same as Section BG */
   border-radius: 1.8rem;
 }
 
@@ -175,17 +229,78 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.image-inner img:hover {
+  transform: scale(1.1);
 }
 
 @keyframes rotateBorder {
   100% { transform: rotate(360deg); }
 }
 
-/* 3. BUTTON STYLES (High Attraction) */
+/* --- 5. STAT CARDS (Experience & Projects) --- */
+.about__cards-flex {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1.5rem;
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.glass-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--color-primary);
+  background: rgba(77, 181, 255, 0.05);
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+/* --- 6. DESCRIPTION & HIGHLIGHTS --- */
+.description-text {
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  margin-bottom: 2.5rem;
+}
+
+/* Critical Fix for Span Highlights */
+.description-text .highlight-blue {
+  color: #4db5ff !important; /* Force Brand Blue */
+  font-weight: 700;
+  background: rgba(77, 181, 255, 0.1); /* Subtle badge look */
+  padding: 0 5px;
+  border-radius: 4px;
+  transition: 0.3s;
+  display: inline-block;
+}
+
+.description-text .highlight-blue:hover {
+  color: #fff !important;
+  background: var(--color-primary);
+  text-shadow: 0 0 10px #fff;
+  transform: translateY(-2px);
+}
+
+/* --- 7. BUTTON STYLES --- */
 .about__btns {
   display: flex;
   gap: 1.5rem;
-  margin-top: 2rem;
 }
 
 .btn-modern {
@@ -194,29 +309,21 @@
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
-  transition: all 0.4s ease;
+  transition: 0.4s;
   font-size: 0.85rem;
-  display: inline-block;
+  text-decoration: none;
 }
 
-/* Glowing Pulse Connect Button */
 .btn-connect {
   background: var(--color-primary);
   color: #000 !important;
-  box-shadow: 0 0 15px rgba(77, 181, 255, 0.4);
+  box-shadow: 0 4px 15px rgba(77, 181, 255, 0.3);
 }
 
-.btn-connect:hover {
-  transform: scale(1.05);
-  box-shadow: 0 0 25px var(--color-primary);
-}
-
-/* Sleek View Work Button */
 .btn-view {
   background: rgba(255, 255, 255, 0.05);
   color: #fff !important;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
 }
 
 .btn-view:hover {
@@ -225,34 +332,28 @@
   border-color: var(--color-primary);
 }
 
-/* 4. STAT CARDS (Experience & Projects) */
-.about__cards-flex {
-  display: flex;
-  gap: 1.5rem;
-  margin-bottom: 2rem;
+/* Pulse Animation for Connect Button */
+.pulse {
+  animation: pulse-glow 2s infinite;
 }
 
-.stat-card {
-  flex: 1;
-  padding: 2rem;
-  transition: 0.4s;
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 0 0px rgba(77, 181, 255, 0.4); }
+  70% { box-shadow: 0 0 0 15px rgba(77, 181, 255, 0); }
+  100% { box-shadow: 0 0 0 0px rgba(77, 181, 255, 0); }
 }
 
-.stat-card:hover {
-  transform: translateY(-10px);
-  border-color: var(--color-primary);
-  background: rgba(77, 181, 255, 0.05);
-}
-
-.stat-icon {
-  font-size: 1.8rem;
-  color: var(--color-primary);
-  margin-bottom: 1rem;
-}
-
-/* RESPONSIVE */
+/* --- 8. RESPONSIVE QUERIES --- */
 @media screen and (max-width: 1024px) {
   .about__layout { grid-template-columns: 1fr; text-align: center; }
-  .image-neon-frame { margin: 0 auto; }
-  .about__btns { justify-content: center; }
+  .about__left { margin-bottom: 2rem; }
+  .about__btns, .about__cards-flex { justify-content: center; }
+}
+
+@media screen and (max-width: 600px) {
+  .about__cards-flex { flex-direction: column; }
+  .image-neon-frame { max-width: 280px; }
+  .section-title { font-size: 2rem; }
+  /* Hide smaller icons on mobile for performance */
+  .express-icon, .ts-icon { display: none; }
 }

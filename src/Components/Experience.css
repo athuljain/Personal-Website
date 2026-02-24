@@ -1,4 +1,4 @@
-.experience__container {
+/* .experience__container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 2rem;
@@ -67,4 +67,145 @@
         width: 100%;
         padding: 2rem 1rem;
     }
+} */
+
+
+
+#experience {
+  padding: 10rem 0;
+  position: relative;
+  background: #0f172a;
+  overflow: hidden;
+}
+
+/* --- 1. BACKGROUND --- */
+.header__texture {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(77, 181, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77, 181, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(77, 181, 255, 0.12), transparent 80%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  z-index: 1;
+}
+
+/* --- 2. TECH ORBIT (With JS Icon) --- */
+.tech-orbit {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.orbit-icon {
+  position: absolute;
+  color: rgba(77, 181, 255, 0.06);
+  filter: blur(1px);
+  animation: floatVertical 10s infinite ease-in-out;
+}
+
+.react-icon-exp   { top: 10%; left: 5%; font-size: 5.5rem; }
+.next-icon-exp    { top: 15%; right: 10%; font-size: 4rem; }
+.mongo-icon-exp   { bottom: 10%; left: 8%; font-size: 4.5rem; }
+.node-icon-exp    { bottom: 15%; right: 5%; font-size: 5rem; }
+.express-icon-exp { top: 45%; right: 12%; font-size: 3.5rem; }
+.ts-icon-exp      { top: 50%; left: 10%; font-size: 3rem; }
+.js-icon-exp      { bottom: 40%; left: 3%; font-size: 4rem; opacity: 0.5; } /* JS Placement */
+
+@keyframes floatVertical {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-40px) rotate(15deg); }
+}
+
+/* --- 3. GRADIENT TEXT (Warning Fix) --- */
+.gradient-text {
+  font-size: 2.2rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #fff, #4db5ff);
+  -webkit-background-clip: text; /* Prefix */
+  background-clip: text;         /* Standard - Removes Warning */
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- 4. CARD & ALIGNMENT FIX --- */
+.experience__container {
+  position: relative;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.glass-card {
+  width: 100%;
+  max-width: 850px;
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2.5rem;
+  padding: 4rem;
+}
+
+.experience__content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.experience__details {
+  display: flex;
+  gap: 1.2rem;
+  align-items: flex-start; /* Keeps icon aligned with first line */
+  opacity: 0;
+  animation: revealIn 0.8s ease forwards;
+}
+
+.experience__details-icon {
+  color: #4db5ff;
+  font-size: 1.2rem;
+  margin-top: 4px; /* Centers with first line of text */
+  flex-shrink: 0;
+}
+
+.skill__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  align-items: flex-start; /* Ensures name and level stay left-aligned */
+}
+
+.skill__text-wrapper h4 {
+  font-weight: 600;
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.skill__level {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.85rem;
+}
+
+.badge-glow {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.4rem 1.2rem;
+  background: rgba(77, 181, 255, 0.1);
+  color: #4db5ff;
+  border-radius: 50px;
+  border: 1px solid rgba(77, 181, 255, 0.3);
+}
+
+@keyframes revealIn {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 600px) {
+  .experience__content { grid-template-columns: 1fr; }
+  .tech-orbit { display: none; }
 }

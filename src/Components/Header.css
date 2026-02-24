@@ -113,12 +113,20 @@
 
 .name-gradient {
   font-size: 4.5rem;
+  font-weight: 800; /* Added for extra impact on gradients */
   background: linear-gradient(to right, #fff, var(--color-primary), #4db5ff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  
+  /* 1. The Prefix (For Safari and older Chrome) */
+  -webkit-background-clip: text; 
+  
+  /* 2. The Standard (Removes the warning) */
+  background-clip: text; 
+  
+  /* 3. The Fill (Essential for the effect to work) */
+  -webkit-text-fill-color: transparent; 
+  
   margin: 1rem 0;
 }
-
 .role-wrapper {
   background: rgba(77, 181, 255, 0.1);
   padding: 0.5rem 1.5rem;
