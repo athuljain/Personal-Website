@@ -7,7 +7,8 @@ import Intro from "./Components/Intro";
 import Experience from "./Components/Experience";
 
 import Contact from "./Components/Contact";
-import Portfolio from "./Components/Portfolio";
+// import Portfolio from "./Components/Portfolio";
+import Portfolio from "./Components/PortfolioPage";
 
 function App() {
   return (
