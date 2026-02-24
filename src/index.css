@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -53,8 +53,8 @@ body {
   color: var(--color-white);
   line-height: 1.7;
   /* background-image: url(../src/Assets/bg-texture.png); */
-}
-
+/* } */
+/* 
 .container {
   width: var(--container-width-lg);
   margin: 0 auto;
@@ -147,4 +147,138 @@ img {
   section > h2 {
     margin-bottom: 2rem;
   }
+} */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Roboto:wght@100;300;700;900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+}
+
+:root {
+  /* Updated to the Deep Navy Palette from your sections */
+  --color-bg: #0f172a; 
+  --color-bg-variant: rgba(255, 255, 255, 0.02);
+  --color-primary: #4db5ff;
+  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-white: #fff;
+  --color-light: rgba(255, 255, 255, 0.6);
+
+  --transition: all 400ms ease;
+
+  --container-width-lg: 75%;
+  --container-width-md: 86%;
+  --container-width-sm: 90%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.7;
+  overflow-x: hidden;
+  position: relative;
+  
+  /* GLOBAL BACKGROUND TEXTURE */
+  /* This creates the grid and the radial glow across the whole site */
+  background-image: 
+    linear-gradient(rgba(77, 181, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77, 181, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(77, 181, 255, 0.1), transparent 80%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  background-attachment: fixed; /* Keeps texture still while scrolling */
+}
+
+/* Ensure sections don't have solid backgrounds that hide the body texture */
+section {
+  margin-top: 8rem;
+  background: transparent !important; 
+}
+
+.container {
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+/* --- WARNING-FREE TEXT GRADIENTS --- */
+h1, .name-gradient, .section-title-glow {
+  background: linear-gradient(to right, #fff, var(--color-primary), #4db5ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+section > h2,
+section > h5 {
+  color: var(--color-light);
+  text-align: center;
+}
+
+section > h2 {
+  color: var(--color-primary);
+  margin-bottom: 3rem;
+}
+
+/* --- REUSABLE BUTTONS --- */
+.btn {
+  width: max-content;
+  display: inline-block;
+  color: var(--color-primary);
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  transition: var(--transition);
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: var(--color-white);
+  color: var(--color-bg);
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-bg);
+  font-weight: 600;
+}
+
+img {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 1024px){
+  .container { width: var(--container-width-md); }
+  section { margin-top: 6rem; }
+}
+
+@media screen and (max-width: 600px){
+  .container { width: var(--container-width-sm); }
+  section > h2 { margin-bottom: 2rem; }
+  body { background-size: 30px 30px, 30px 30px, 100% 100%; } /* Smaller grid for mobile */
 }

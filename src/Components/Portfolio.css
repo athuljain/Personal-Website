@@ -1,4 +1,4 @@
-.portfolio__container {
+/* .portfolio__container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2.5rem;
@@ -54,4 +54,227 @@
         grid-template-columns: 1fr;
         gap: 1rem;
     }
+} */
+
+
+/* --- PORTFOLIO SECTION WRAPPER --- */
+#portfolio {
+  padding: 10rem 0;
+  position: relative;
+  background: #0f172a; /* Deep Navy matching Intro & Experience */
+  overflow: hidden;
+}
+
+/* --- 1. DYNAMIC BACKGROUND TEXTURE --- */
+.header__texture {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(77, 181, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77, 181, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(77, 181, 255, 0.12), transparent 80%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* --- 2. TECH ORBIT (All Imported Icons) --- */
+.tech-orbit {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.orbit-icon {
+  position: absolute;
+  color: rgba(77, 181, 255, 0.05);
+  filter: blur(1px);
+  animation: floatVertical 12s infinite ease-in-out;
+}
+
+/* Individual Placements for All 7 Icons */
+.port-icon-react   { top: 5%; left: 3%; font-size: 6rem; animation-delay: 0s; }
+.port-icon-next    { top: 15%; right: 5%; font-size: 5rem; animation-delay: 2s; }
+.port-icon-mongo   { bottom: 8%; left: 5%; font-size: 4.5rem; animation-delay: 4s; }
+.port-icon-node    { bottom: 12%; right: 4%; font-size: 5.5rem; animation-delay: 1s; }
+.port-icon-express { top: 45%; right: 8%; font-size: 3.5rem; animation-delay: 3s; }
+.port-icon-ts      { top: 50%; left: 6%; font-size: 3rem; animation-delay: 5s; }
+.port-icon-js      { top: 25%; left: 15%; font-size: 4rem; animation-delay: 1.5s; opacity: 0.03; }
+
+@keyframes floatVertical {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-40px) rotate(10deg); }
+}
+
+/* --- 3. SECTION TITLES --- */
+.section-title-glow {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 4rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #fff, #4db5ff);
+  -webkit-background-clip: text; /* Prefix */
+  background-clip: text;         /* Standard - Fixes Warning */
+  -webkit-text-fill-color: transparent;
+}
+
+/* --- 4. PORTFOLIO GRID & ITEMS --- */
+.portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  position: relative;
+  z-index: 5;
+}
+
+.portfolio__item {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  padding: 1.5rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio__item:hover {
+  transform: translateY(-10px);
+  border-color: #4db5ff;
+  background: rgba(77, 181, 255, 0.05);
+}
+
+/* --- 5. IMAGE & OVERLAY --- */
+.portfolio__item-image {
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+  height: 180px; /* Fixed height for clean grid */
+}
+
+.portfolio__item-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s ease;
+}
+
+.portfolio__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 23, 42, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.2rem;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+
+.portfolio__item:hover .portfolio__overlay {
+  opacity: 1;
+}
+
+.overlay-icon {
+  background: #4db5ff;
+  color: #0f172a;
+  padding: 0.8rem;
+  border-radius: 50%;
+  display: flex;
+  font-size: 1.1rem;
+  transition: 0.3s ease;
+}
+
+.overlay-icon:hover {
+  transform: scale(1.2);
+  background: #fff;
+}
+
+/* --- 6. TEXT CONTENT --- */
+.portfolio__item-content h3 {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 1.15rem;
+  color: #fff;
+  line-height: 1.4;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+}
+
+.tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.tech-badge {
+  background: rgba(77, 181, 255, 0.08);
+  color: #4db5ff;
+  font-size: 0.7rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: 4px;
+  border: 1px solid rgba(77, 181, 255, 0.2);
+}
+
+/* --- 7. CTA BUTTONS --- */
+.portfolio__item-cta {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto; /* Keeps buttons aligned at bottom */
+}
+
+.btn-modern {
+  flex: 1;
+  text-align: center;
+  padding: 0.7rem 0;
+  border-radius: 0.8rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.btn-view {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.btn-view:hover {
+  background: #fff;
+  color: #0f172a;
+}
+
+.btn-connect {
+  background: #4db5ff;
+  color: #0f172a;
+}
+
+.btn-connect:hover {
+  background: #fff;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+/* --- 8. RESPONSIVE --- */
+@media screen and (max-width: 1024px) {
+  .portfolio__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #portfolio { padding: 6rem 0; }
+  .portfolio__grid { grid-template-columns: 1fr; }
+  .tech-orbit { display: none; }
+  .section-title-glow { font-size: 2rem; }
 }

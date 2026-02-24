@@ -1,4 +1,4 @@
-.container.contact__container {
+/* .container.contact__container {
     width: 58%;
     display: grid;
     grid-template-columns: 30% 58%;
@@ -77,4 +77,204 @@ textarea {
     .container.contact__container {
         width: var(--container-width-sm);
     }
+} */
+
+
+#contact {
+  padding: 8rem 0;
+  position: relative;
+  background: #0f172a;
+  overflow: hidden;
+}
+
+/* --- BACKGROUND SYNC --- */
+.header__texture {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(77, 181, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77, 181, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(77, 181, 255, 0.12), transparent 80%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  z-index: 1;
+}
+
+.orbit-icon {
+  position: absolute;
+  color: rgba(77, 181, 255, 0.05);
+  filter: blur(1px);
+  animation: floatVertical 12s infinite ease-in-out;
+  z-index: 1;
+}
+
+/* Icon Positions */
+.con-icon-1 { top: 10%; left: 5%; font-size: 5rem; }
+.con-icon-2 { top: 20%; right: 8%; font-size: 4rem; }
+.con-icon-3 { bottom: 15%; left: 10%; font-size: 4.5rem; }
+.con-icon-4 { bottom: 10%; right: 5%; font-size: 5rem; }
+.con-icon-5 { top: 40%; left: 2%; font-size: 3rem; }
+.con-icon-6 { top: 50%; right: 2%; font-size: 3.5rem; }
+.con-icon-7 { bottom: 40%; right: 15%; font-size: 4rem; opacity: 0.03; }
+
+@keyframes floatVertical {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-30px) rotate(10deg); }
+}
+
+/* --- TITLES & HEADINGS --- */
+.contact__head {
+  text-align: center;
+  margin-bottom: 4rem;
+  position: relative;
+  z-index: 5;
+}
+
+.section-title-glow {
+  font-size: 2.8rem;
+  font-weight: 800;
+  background: linear-gradient(to right, #fff, #4db5ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.contact__info-text {
+  color: rgba(255, 255, 255, 0.5);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/* --- CONTACT LAYOUT --- */
+.contact__container {
+  position: relative;
+  z-index: 5;
+}
+
+.contact__wrapper {
+  display: grid;
+  grid-template-columns: 30% 60%;
+  gap: 10%;
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Glass Card Global */
+.glass-card {
+  background: rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+/* Email Option Card */
+.contact__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  transition: 0.4s ease;
+}
+
+.contact__option:hover {
+  border-color: #4db5ff;
+  background: rgba(77, 181, 255, 0.05);
+}
+
+.contact__option-icon {
+  font-size: 2rem;
+  color: #4db5ff;
+  margin-bottom: 0.5rem;
+}
+
+.contact__option a {
+  font-size: 0.85rem;
+  color: #4db5ff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* --- FORM STYLING --- */
+.contact__form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.input__group {
+  display: flex;
+  gap: 1.5rem;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 1.2rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  color: #fff;
+  font-family: inherit;
+  transition: 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #4db5ff;
+  background: rgba(255, 255, 255, 0.07);
+  outline: none;
+  box-shadow: 0 0 15px rgba(77, 181, 255, 0.1);
+}
+
+.btn-connect {
+  background: #4db5ff;
+  color: #0f172a;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  transition: 0.3s ease;
+}
+
+.btn-connect:hover {
+  background: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 20px rgba(77, 181, 255, 0.3);
+}
+
+.send-icon {
+  font-size: 1rem;
+}
+
+.success-message {
+  text-align: center;
+  color: #4db5ff;
+  font-weight: 600;
+  animation: fadeIn 0.5s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- RESPONSIVE --- */
+@media screen and (max-width: 1024px) {
+  .contact__wrapper {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .input__group { flex-direction: column; }
+  #contact { padding: 6rem 0; }
+  .tech-orbit { display: none; }
 }
