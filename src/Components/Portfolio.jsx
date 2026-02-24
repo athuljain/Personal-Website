@@ -1,7 +1,9 @@
 import IMG1 from "../Assets/reactEcomerce.png";
 import IMG2 from "../Assets/todoredux.png";
-import IMG3 from "../Assets/backend.png";
+// import IMG3 from "../Assets/backend.png";
 import IMG4 from "../Assets/perosnalPortfolio.jpg"
+import CookPostImg from "../Assets/recipeapp.jpg"
+
 import MernEcom from "../Assets/MernEcom.jpg"
 import BloodBank from '../Assets/BloodBankMern.jpg'
 import DoctorBooking from '../Assets/DoctorBooking.jpg'
@@ -22,8 +24,18 @@ const portfolio = () => {
       link: "https://lucky-hummingbird-9e9472.netlify.app/",
       github: "https://github.com/athuljain/React-online-furniture-shop",
     },
+{
+  id: 2,
+  title: "Cook Post Share - Recipe App",
+  img: CookPostImg, // Ensure you import your image asset at the top
+  description: "A full-stack platform to discover, create, and share culinary recipes.",
+  technologies: "Next.js | Tailwind CSS | MongoDB | NextAuth",
+  link: "https://your-deployment-link.com", 
+  github: "https://github.com/athuljain/recipe-app-nextjs", 
+},
+
     {
-      id: 2,
+      id: 3,
       title: "To-Do App with Redux",
       img: IMG2,
       description: "Todo Application.",
@@ -31,15 +43,15 @@ const portfolio = () => {
       link: "https://main--marvelous-trifle-b2888a.netlify.app/",
       github: "https://github.com/athuljain/React_Redux_ToDoApp",
     },
-    {
-      id: 3,
-      title: "E-commerce BackEnd project - online shirt shop",
-      img: IMG3,
-      description: "E-commerce BackEnd project - online shirt shop ",
-      technologies: "NodeJs | Express | MongoDB",
-      link: "https://github.com/athuljain/ecommerce.git",
-      github: "https://github.com/athuljain/ecommerce.git",
-    },
+    // {
+    //   id: 3,
+    //   title: "E-commerce BackEnd project - online shirt shop",
+    //   img: IMG3,
+    //   description: "E-commerce BackEnd project - online shirt shop ",
+    //   technologies: "NodeJs | Express | MongoDB",
+    //   link: "https://github.com/athuljain/ecommerce.git",
+    //   github: "https://github.com/athuljain/ecommerce.git",
+    // },
     {
       id:4 ,
       title: "Perosnal Portfolio app",

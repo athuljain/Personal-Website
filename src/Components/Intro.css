@@ -1,7 +1,11 @@
-.about__container {
+/* .about__container {
     display: grid;
     grid-template-columns: 35% 50%;
     gap: 15%;
+}
+.about__content p b {
+    color: var(--color-primary); 
+    font-weight: 600;
 }
 
 .about__me {
@@ -98,4 +102,157 @@
     .about__content p {
         margin: 1.5rem 0;
     }
+} */
+
+
+
+#about {
+  padding: 8rem 0;
+  position: relative;
+  background: #0f172a; /* Same as header */
+  overflow: hidden;
+}
+
+/* 1. Reuse Header Texture */
+.header__texture {
+  z-index: 1; /* Keep grid behind content */
+}
+
+.about__container {
+  position: relative;
+  z-index: 2; /* Content above texture */
+}
+
+.about__layout {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 4rem;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+/* 2. THE NEON BORDER (Fixed to image size) */
+.image-neon-frame {
+  position: relative;
+  width: 100%;
+  max-width: 320px;
+  aspect-ratio: 4/5; /* Adjust to your image's shape */
+  background: #111;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* Clips the rotation to image size */
+}
+
+.image-neon-frame::before {
+  content: '';
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  background: conic-gradient(transparent, transparent, transparent, var(--color-primary));
+  animation: rotateBorder 4s linear infinite;
+}
+
+.image-neon-frame::after {
+  content: '';
+  position: absolute;
+  inset: 4px; /* Border thickness */
+  background: #0f172a; /* Match page bg */
+  border-radius: 1.8rem;
+}
+
+.image-inner {
+  position: relative;
+  z-index: 2;
+  width: 95%;
+  height: 95%;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.image-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@keyframes rotateBorder {
+  100% { transform: rotate(360deg); }
+}
+
+/* 3. BUTTON STYLES (High Attraction) */
+.about__btns {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.btn-modern {
+  padding: 1rem 2.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.4s ease;
+  font-size: 0.85rem;
+  display: inline-block;
+}
+
+/* Glowing Pulse Connect Button */
+.btn-connect {
+  background: var(--color-primary);
+  color: #000 !important;
+  box-shadow: 0 0 15px rgba(77, 181, 255, 0.4);
+}
+
+.btn-connect:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px var(--color-primary);
+}
+
+/* Sleek View Work Button */
+.btn-view {
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff !important;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(5px);
+}
+
+.btn-view:hover {
+  background: var(--color-primary);
+  color: #000 !important;
+  border-color: var(--color-primary);
+}
+
+/* 4. STAT CARDS (Experience & Projects) */
+.about__cards-flex {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  flex: 1;
+  padding: 2rem;
+  transition: 0.4s;
+}
+
+.stat-card:hover {
+  transform: translateY(-10px);
+  border-color: var(--color-primary);
+  background: rgba(77, 181, 255, 0.05);
+}
+
+.stat-icon {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 1rem;
+}
+
+/* RESPONSIVE */
+@media screen and (max-width: 1024px) {
+  .about__layout { grid-template-columns: 1fr; text-align: center; }
+  .image-neon-frame { margin: 0 auto; }
+  .about__btns { justify-content: center; }
 }

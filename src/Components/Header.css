@@ -1,4 +1,4 @@
-header {
+/* header {
     height: 100%;
     padding-top: 7rem;
     overflow: hidden;
@@ -62,4 +62,116 @@ header {
     .scroll__down {
       display: none;
     }
-  }
+  } */
+
+  header {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  /* Deep Dark Background */
+  background: #0f172a; 
+}
+
+/* Background Texture: Grid + Radial Glow */
+.header__texture {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: 
+    linear-gradient(rgba(77, 181, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(77, 181, 255, 0.05) 1px, transparent 1px),
+    radial-gradient(circle at 50% 50%, rgba(77, 181, 255, 0.15), transparent 70%);
+  background-size: 40px 40px, 40px 40px, 100% 100%;
+  z-index: 1;
+}
+
+.header__container {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Glassmorphism Card */
+.glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 2rem;
+  padding: 3rem 5rem;
+  text-align: center;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  animation: float 6s ease-in-out infinite;
+}
+
+.name-gradient {
+  font-size: 4.5rem;
+  background: linear-gradient(to right, #fff, var(--color-primary), #4db5ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 1rem 0;
+}
+
+.role-wrapper {
+  background: rgba(77, 181, 255, 0.1);
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+/* Socials & Lines */
+.header__socials {
+  position: absolute;
+  left: 3rem;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.socials-line {
+  width: 2px;
+  height: 5rem;
+  background: linear-gradient(var(--color-primary), transparent);
+}
+
+.scroll__down {
+  position: absolute;
+  right: 1rem;
+  bottom: 5rem;
+  transform: rotate(90deg);
+  color: var(--color-primary);
+  letter-spacing: 0.2rem;
+  transition: 0.4s;
+}
+
+/* ANIMATIONS */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(77, 181, 255, 0.7); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(77, 181, 255, 0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(77, 181, 255, 0); }
+}
+
+.pulse { animation: pulse 2s infinite; }
+
+/* RESPONSIVE */
+@media screen and (max-width: 600px) {
+  .glass-card { padding: 2rem; width: 90%; }
+  .name-gradient { font-size: 2.5rem; }
+  .header__socials, .scroll__down { display: none; }
+}
