@@ -35,7 +35,7 @@ const Portfolio = () => {
   img: CookPostImg, // Ensure you import your image asset at the top
   description: "A full-stack platform to discover, create, and share culinary recipes.",
   technologies: "Next.js | Tailwind CSS | MongoDB | NextAuth",
-  link: "https://your-deployment-link.com", 
+  link: "https://next-js-recipe-app-six.vercel.app/", 
   github: "https://github.com/athuljain/recipe-app-nextjs", 
 },
 
