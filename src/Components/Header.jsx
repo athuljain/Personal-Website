@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
@@ -12,7 +10,6 @@ const Header = () => {
     <header id="home">
       {/* Texture Layer */}
       <div className="header__texture"></div>
-      
       <div className="container header__container">
         <div className="glass-card">
           <h5 className="intro-text">Hello I'm</h5>
