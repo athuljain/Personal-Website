@@ -28,10 +28,10 @@ const Header = () => {
         </div>
 
         <div className="header__socials">
-          <a href="https://linkedin.com/..." target="_blank" rel="noreferrer"><BsLinkedin /></a>
-          <a href="https://github.com..." target="_blank" rel="noreferrer"><FaGithub /></a>
-          <a href="https://codesandbox.io..." target="_blank" rel="noreferrer"><AiFillCodeSandboxCircle /></a>
-           <a href="https://linkedin.com/..." target="_blank" rel="noreferrer"><AiFillInstagram /></a>
+          <a href="https://www.linkedin.com/in/athul-jain-5382b0215/" target="_blank" rel="noreferrer"><BsLinkedin /></a>
+          <a href="https://github.com/athuljain" target="_blank" rel="noreferrer"><FaGithub /></a>
+          <a href="https://codesandbox.io/u/athuljain" target="_blank" rel="noreferrer"><AiFillCodeSandboxCircle /></a>
+           <a href="https://www.instagram.com/athul_jain/" target="_blank" rel="noreferrer"><AiFillInstagram /></a>
           <div className="socials-line"></div>
         </div>
 
