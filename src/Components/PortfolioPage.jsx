@@ -8,9 +8,7 @@ import CookPostImg from "../Assets/recipeapp.jpg"
 import MernEcom from "../Assets/MernEcom.jpg"
 import BloodBank from '../Assets/BloodBankMern.jpg'
 import DoctorBooking from '../Assets/DoctorBooking.jpg'
- // import IMG4 from "../../assets/Covid-19 Project.jpg";
-// import IMG5 from "../../assets/Jokes Project.jpg";
-// import IMG6 from "../../assets/Project4.jpg";
+
 import React from "react";
 import "./Portfolio.css";
 import { FaReact, FaNodeJs, FaGithub, FaExternalLinkAlt } from "react-icons/fa";

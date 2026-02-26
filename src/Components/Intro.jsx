@@ -1,5 +1,3 @@
-
-
 import React from "react";
 import { FaAward, FaRocket } from "react-icons/fa";
 import { FaReact, FaNodeJs } from "react-icons/fa";

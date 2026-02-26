@@ -1,4 +1,3 @@
-
 import "./Contact.css";
 import React, { useRef, useState } from "react";
 import { MdOutlineEmail } from "react-icons/md";
