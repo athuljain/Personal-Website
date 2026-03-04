@@ -8,7 +8,7 @@ import AthulJainMern from '../Assets/athuljainMernStack.pdf';
 const Header = () => {
   return (
     <header id="home">
-      {/* Texture Layer */}
+    
       <div className="header__texture"></div>
       <div className="container header__container">
         <div className="glass-card">
