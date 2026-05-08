@@ -11,6 +11,7 @@ const Experience = () => {
     { name: "JavaScript", level: "Experienced" },
     { name: "TypeScript", level: "Intermediate" },
     { name: "React / Vite", level: "Experienced" },
+    {name:"ReactNative",level:"Intermediate"},
     { name: "Redux Toolkit", level: "Experienced" },
     { name: "Node.js / Express", level: "Experienced" },
     { name: "MongoDB", level: "Intermediate" },
