@@ -49,18 +49,18 @@ const Intro = () => {
               </article>
             </div>
 
-            <div className="description-box">
-              <p className="description-text">
-                I am a <span className="highlight-blue">Full-Stack Developer</span> specializing in the 
-                <span className="highlight-blue">MERN Stack & Next.js</span>. I build high-performance, 
-                scalable web applications with a focus on clean architecture.
-                <br /><br />
-                With expertise in <span className="highlight-blue">TypeScript, Express, and MongoDB</span>, 
-                I bridge the gap between complex back-end logic and intuitive front-end designs. 
-                Currently exploring <span className="highlight-blue">C#</span> to broaden my 
-                enterprise-level capabilities.
-              </p>
-            </div>
+          <div className="description-box">
+  <p className="description-text">
+    I am a <span className="highlight-blue">Full-Stack & Mobile Developer</span> specializing in the 
+    <span className="highlight-blue">MERN Stack, Next.js, and React Native</span>. I build high-performance, 
+    scalable web and mobile applications with a focus on clean architecture.
+    <br /><br />
+    With expertise in <span className="highlight-blue">TypeScript, Express, and MongoDB</span>, 
+    I bridge the gap between complex back-end logic and intuitive cross-platform designs. 
+    Currently exploring <span className="highlight-blue">C#</span> to broaden my 
+    enterprise-level capabilities.
+  </p>
+</div>
 
             <div className="about__btns">
               <a href="#contact" className="btn-modern btn-connect pulse">Let's Connect</a>
