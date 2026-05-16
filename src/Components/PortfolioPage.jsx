@@ -1,7 +1,7 @@
 
 import IMG1 from "../Assets/reactEcomerce.png";
 import IMG2 from "../Assets/todoredux.png";
-// import IMG3 from "../Assets/backend.png";
+
 import IMG4 from "../Assets/perosnalPortfolio.jpg"
 import CookPostImg from "../Assets/recipeapp.jpg"
 
@@ -13,7 +13,7 @@ import React from "react";
 import "./Portfolio.css";
 import { FaReact, FaNodeJs, FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 import { SiNextdotjs, SiMongodb, SiExpress, SiTypescript,SiJavascript } from "react-icons/si";
-// ... (keep all your existing IMG imports)
+
 import "./Portfolio.css";
 
 const Portfolio = () => {
