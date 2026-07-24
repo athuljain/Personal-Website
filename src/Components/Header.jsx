@@ -3,7 +3,9 @@ import { BsLinkedin } from "react-icons/bs";
 import { FaGithub } from "react-icons/fa";
 import { AiFillInstagram, AiFillCodeSandboxCircle } from "react-icons/ai";
 import "./Header.css";
-import AthulJainMern from '../Assets/AthulJain-MernStack.pdf';
+// import AthulJainMern from '../Assets/AthulJain-MernStack.pdf';
+import AthulResume from '../Assets/AthulJain_FullStack.docx'
+
 
 const Header = () => {
   return (
@@ -15,11 +17,11 @@ const Header = () => {
           <h5 className="intro-text">Hello I'm</h5>
           <h1 className="name-gradient">Athul Jain</h1>
           <div className="role-wrapper">
-             <h5 className="text-light typing-animation">Full-Stack Developer | MERN | Next.js | React Native</h5>
+             <h5 className="text-light typing-animation">Full-Stack Developer | MERN | Next.js | React Native | Django</h5>
           </div>
           
           <div className="cta">
-            <a href={AthulJainMern} download className="btn btn-outline">Download CV</a>
+            <a href={AthulResume} download className="btn btn-outline">Download CV</a>
             <a href="#contact" className="btn btn-primary pulse">Let's Talk</a>
           </div>
         </div>
