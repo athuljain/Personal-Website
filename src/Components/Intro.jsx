@@ -21,7 +21,7 @@ const Intro = () => {
       
       <div className="container about__container">
         <h5>Get to know</h5>
-        <h2 className="section-title">About Me</h2>
+        <h2 className="section-title">About Me!</h2>
 
         <div className="about__layout">
           {/* LEFT: Perfectly Framed Image */}
@@ -29,6 +29,7 @@ const Intro = () => {
             <div className="image-neon-frame">
               <div className="image-inner">
                 <img src={img} alt="Athul Jain" />
+
               </div>
             </div>
           </div>
