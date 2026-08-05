@@ -4,7 +4,7 @@ import IMG2 from "../Assets/todoredux.png";
 import IMG4 from "../Assets/perosnalPortfolio.jpg";
 import CookPostImg from "../Assets/recipeapp.jpg";
 
-import MernEcom from "../Assets/MernEcom.jpg";
+// import MernEcom from "../Assets/MernEcom.jpg";
 import BloodBank from "../Assets/BloodBankMern.jpg";
 import DoctorBooking from "../Assets/DoctorBooking.jpg";
 import OasisFitness from "../Assets/oasis.jpg";
